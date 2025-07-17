@@ -34,7 +34,10 @@ function DrinkCard({ drink }: DrinkCardProps) {
             <i className="fas fa-bookmark absolute -top-2 -right-2 h-7 w-7 rounded-full bg-orange-500 p-2 text-center text-sm text-white shadow-2xl"></i>
           </button>
         ) : (
-          <button className="flex items-center justify-center">
+          <button
+            onClick={() => selectRecipe(drink.idDrink)}
+            className="flex items-center justify-center"
+          >
             <i className="far fa-bookmark absolute -top-2 -right-2 h-7 w-7 rounded-full bg-orange-500 p-2 text-center text-sm text-white shadow-2xl"></i>
           </button>
         )}
