@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer components {
+  .header-bg {
+    background-image: url("/bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .custom-scroll {
+    /* overflow-y: scroll; */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  .custom-scroll::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}
