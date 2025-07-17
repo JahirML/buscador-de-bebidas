@@ -1,7 +1,6 @@
-import { use, useEffect, useRef, type JSX } from "react";
+import { useEffect, useRef, type JSX } from "react";
 import { useAppStore } from "../stores/useAppStore";
 import type { Recipe } from "../types";
-import { fa } from "zod/locales";
 
 function Modal() {
   const ref = useRef<HTMLDivElement>(null);

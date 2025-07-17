@@ -1,4 +1,3 @@
-import { Button } from "@headlessui/react";
 import { useAppStore } from "../stores/useAppStore";
 import type { Drink } from "../types";
 
@@ -7,8 +6,7 @@ type DrinkCardProps = {
 };
 
 function DrinkCard({ drink }: DrinkCardProps) {
-  const { selectRecipe, favoriteExists, handleClickFavorite, selectedRecipe } =
-    useAppStore((state) => state);
+  const { selectRecipe, favoriteExists } = useAppStore((state) => state);
   const { idDrink } = drink;
   return (
     <div className="relative rounded-lg shadow-xl">

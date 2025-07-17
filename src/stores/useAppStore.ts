@@ -5,17 +5,10 @@ import {
   createFavoritesSlice,
   type FavoritesSliceType,
 } from "./favoritesSlice";
-import {
-  createNotificationSlice,
-  type NotificationSliceType,
-} from "./notificationsSlice";
 
-export const useAppStore = create<
-  RecipeSliceType & FavoritesSliceType & NotificationSliceType
->()(
+export const useAppStore = create<RecipeSliceType & FavoritesSliceType>()(
   devtools((...a) => ({
     ...createRecipeSlice(...a),
     ...createFavoritesSlice(...a),
-    ...createNotificationSlice(...a),
   })),
 );
